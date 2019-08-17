@@ -69,6 +69,8 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 @TeleOp(name="Concept: VuMark Id", group ="Concept")
 public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
 
+    HardwarePushbot_5573        robot   = new HardwarePushbot_5573();
+
     public static final String TAG = "Vuforia VuMark Sample";
 
     OpenGLMatrix lastLocation = null;
@@ -84,6 +86,8 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
     VuforiaLocalizer vuforia;
 
     @Override public void runOpMode() {
+
+        robot.init(hardwareMap);
 
         /*
          * To start up Vuforia, tell it the view that we wish to use for camera monitor (on the RC phone);
@@ -180,6 +184,14 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
             }
             else {
                 telemetry.addData("VuMark", "not visible");
+            }
+
+            if(-tZ > 50){
+                robot.motor_1.setPower(0.6f);
+                telemetry.addData("tZ", "Greater THAN 50 go");
+            } else {
+                robot.motor_1.setPower(0f);
+                telemetry.addData("tZ", "less THAN 50 stop");
             }
 
             telemetry.update();
