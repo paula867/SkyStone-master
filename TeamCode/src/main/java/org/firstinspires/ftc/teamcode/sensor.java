@@ -27,12 +27,15 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import org.firstinspires.ftc.teamcode.HardwarePushbot_5573;
 
 /*
  * This is an example LinearOpMode that shows how to use
@@ -55,10 +58,14 @@ public class sensor extends LinearOpMode {
      * The lower (first) pin stays unconnected.*
      */
 
-    DigitalChannel digitalTouch;  // Hardware Device Object
+    /* Declare OpMode members. */
+    HardwarePushbot_5573 robot   = new HardwarePushbot_5573();   // Use a Pushbot's hardware
+    private ElapsedTime runtime = new ElapsedTime();
 
     @Override
     public void runOpMode() {
+
+        robot.init(hardwareMap);
 
         // wait for the start button to be pressed.
         waitForStart();
@@ -69,7 +76,7 @@ public class sensor extends LinearOpMode {
 
             // send the info back to driver station using telemetry function.
             // if the digital channel returns true it's HIGH and the button is unpressed.
-            if (digitalTouch.getState() == true) {
+            if (robot.digitalTouch.getState() == true) {
                 telemetry.addData("Digital Touch", "Is Not Pressed");
 
             } else {
