@@ -73,6 +73,10 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
 
     OpenGLMatrix lastLocation = null;
 
+    float tX, tY, tZ;
+
+    private float mm_to_Inch = 25.4f;
+
     /**
      * {@link #vuforia} is the variable we will use to store our instance of the Vuforia
      * localization engine.
@@ -164,9 +168,9 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
                     Orientation rot = Orientation.getOrientation(pose, AxesReference.EXTRINSIC, AxesOrder.XYZ, AngleUnit.DEGREES);
 
                     // Extract the X, Y, and Z components of the offset of the target relative to the robot
-                    double tX = trans.get(0);
-                    double tY = trans.get(1);
-                    double tZ = trans.get(2);
+                    tX = trans.get(0);
+                    tY = trans.get(1);
+                    tZ = trans.get(2);
 
                     // Extract the rotational components of the target relative to the robot
                     double rX = rot.firstAngle;
