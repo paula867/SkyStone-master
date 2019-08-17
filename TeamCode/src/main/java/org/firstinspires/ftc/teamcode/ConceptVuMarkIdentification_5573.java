@@ -111,6 +111,8 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
          */
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
 
+        parameters.cameraMonitorFeedback = VuforiaLocalizer.Parameters.CameraMonitorFeedback.AXES;
+
         /**
          * Instantiate the Vuforia engine
          */
