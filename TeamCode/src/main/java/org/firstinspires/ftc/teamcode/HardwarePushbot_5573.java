@@ -96,7 +96,7 @@ public class HardwarePushbot_5573
 
         digitalTouch.setMode(DigitalChannel.Mode.INPUT);
 
-        
+
     }
  }
 
