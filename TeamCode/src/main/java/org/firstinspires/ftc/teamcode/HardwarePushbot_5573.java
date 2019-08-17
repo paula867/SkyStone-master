@@ -30,6 +30,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -55,6 +56,8 @@ public class HardwarePushbot_5573
     /* Public OpMode members. */
     public DcMotor  motor_1 = null;
     public Servo    servo_1    = null;
+
+    public DigitalChannel digitalTouch;
 
     public static final double MID_SERVO       =  0.5 ;
     public static final double ARM_UP_POWER    =  0.45 ;
@@ -89,6 +92,9 @@ public class HardwarePushbot_5573
         servo_1  = hwMap.get(Servo.class, "servo_1");
         servo_1.setPosition(MID_SERVO);
 
+        digitalTouch = hwMap.get(DigitalChannel.class, "touch_sensor");
+
+        digitalTouch.setMode(DigitalChannel.Mode.INPUT);
     }
  }
 

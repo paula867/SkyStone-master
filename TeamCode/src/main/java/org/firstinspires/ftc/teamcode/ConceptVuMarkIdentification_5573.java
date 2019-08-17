@@ -67,7 +67,10 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
  */
 
 @TeleOp(name="Concept: VuMark Id", group ="Concept")
+<<<<<<< HEAD
 @Disabled
+=======
+>>>>>>> origin/master
 public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
 
     public static final String TAG = "Vuforia VuMark Sample";
@@ -103,7 +106,11 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
          * Once you've obtained a license key, copy the string from the Vuforia web site
          * and paste it in to your code on the next line, between the double quotes.
          */
+<<<<<<< HEAD
         parameters.vuforiaLicenseKey = " -- YOUR NEW VUFORIA KEY GOES HERE  --- ";
+=======
+        parameters.vuforiaLicenseKey = "AcxJ77X/////AAABmbjNqQxkXUM6t/fuKxL7+xIkavB0iRUMlLWgelDBl34u7kCx7O3e2hSgBkkhUgD1ZMCMs5F9rEgV5egUUwrl6WH2hJcE5JY0MqKzFrxGO6CKxX8KD/Kvzik6ul2TTpDU4p5AQzBPP4B8knQwIjoxpeoO2FcnptN72ozTtgNRA975LP/2aY2mrmL3Vg1jQPsG2hqlPWyo8DVkW0UdJmcfSqih/2/+VEKHIZXsJF8y9FJl+u4I27hO2zQM6jsqivQ+1IgG7aYMMOE4ti5pEbTdIgWpYw19y5W+9Qgmjescl9tlqxrr3Z8sWBKdRsgA+1wjlk5LmTq7OTxAEiUNe98c+2nz5iBl8eTf3HFCqAuPa3D/";
+>>>>>>> origin/master
 
         /*
          * We also indicate which camera on the RC that we wish to use.
@@ -112,6 +119,11 @@ public class ConceptVuMarkIdentification_5573 extends LinearOpMode {
          */
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
 
+<<<<<<< HEAD
+=======
+        parameters.cameraMonitorFeedback = VuforiaLocalizer.Parameters.CameraMonitorFeedback.AXES;
+
+>>>>>>> origin/master
         /**
          * Instantiate the Vuforia engine
          */
