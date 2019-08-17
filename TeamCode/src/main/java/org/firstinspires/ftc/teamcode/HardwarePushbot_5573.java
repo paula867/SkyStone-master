@@ -95,8 +95,7 @@ public class HardwarePushbot_5573
         digitalTouch = hwMap.get(DigitalChannel.class, "touch_sensor");
 
         digitalTouch.setMode(DigitalChannel.Mode.INPUT);
-
-
+        
     }
  }
 
