@@ -100,6 +100,7 @@ public class HardwarePushbot_5573
         rightClaw = hwMap.get(Servo.class, "right_hand");
         leftClaw.setPosition(MID_SERVO);
         rightClaw.setPosition(MID_SERVO);
+        
     }
  }
 
